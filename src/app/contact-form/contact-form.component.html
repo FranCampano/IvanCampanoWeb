@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formulario Contacto Iván Campano</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-6">
+  <form
+    action="https://docs.google.com/forms/d/e/1FAIpQLSfC5oA-3mFoJjoQX1xmWsFocwPihUQEJyoO7vRp8D_xlSwlyQ/formResponse"
+    method="POST"
+    target="hidden_iframe"
+    class="bg-white p-8 rounded-lg shadow-md max-w-lg w-full space-y-6"
+  >
+    <h1 class="text-2xl font-bold mb-4 text-center">Formulario para trabajar con Iván Campano</h1>
+
+    <div>
+      <label for="nombre" class="block font-semibold mb-1">Nombre completo</label>
+      <input type="text" name="entry.1300620699" id="nombre" required
+             class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+    </div>
+
+    <div>
+      <label for="email" class="block font-semibold mb-1">Correo electrónico</label>
+      <input type="email" name="entry.948770044" id="email" required
+             class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+    </div>
+
+    <div>
+      <label for="telefono" class="block font-semibold mb-1">Número de teléfono y prefijo de tu país</label>
+      <input type="tel" name="entry.145203255" id="telefono" required
+             class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+    </div>
+
+    <div>
+      <label for="instagram" class="block font-semibold mb-1">Usuario de Instagram</label>
+      <input type="text" name="entry.1179895581" id="instagram"
+             class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+    </div>
+
+    <div>
+      <label for="marcas" class="block font-semibold mb-1">Marcas más recientes en cada básico (pueden ser oficiales o en gym)</label>
+      <input type="text" name="entry.357995588" id="marcas"
+             class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+    </div>
+
+    <div>
+      <label for="objetivos" class="block font-semibold mb-1">Objetivos a corto y largo plazo (competiciones, marcas personales...)</label>
+      <textarea name="entry.1461119134" id="objetivos" rows="3" required
+                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"></textarea>
+    </div>
+
+    <div>
+      <label for="medidas" class="block font-semibold mb-1">Medidas corporales (peso y altura)</label>
+      <input type="text" name="entry.207382641" id="medidas" required
+             class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+    </div>
+
+    <div>
+      <label for="categoria" class="block font-semibold mb-1">¿En qué categoría te gustaría competir?</label>
+      <input type="text" name="entry.252031657" id="categoria" required
+             class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+    </div>
+
+    <div>
+      <label for="molestias" class="block font-semibold mb-1">Molestias o lesiones que hayas tenido en las últimas semanas o sean recurrentes</label>
+      <textarea name="entry.427158654" id="molestias" rows="3"
+                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"></textarea>
+    </div>
+
+    <div>
+      <label for="dias" class="block font-semibold mb-1">¿Cuántos días vas a poder entrenar a la semana?</label>
+      <input type="number" min="0" max="7" name="entry.2093561072" id="dias" required
+             class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+    </div>
+
+    <button type="submit"
+            class="w-full bg-blue-600 text-white font-bold py-3 rounded-md hover:bg-blue-700 transition-colors">
+      Enviar
+    </button>
+  </form>
+
+  <iframe name="hidden_iframe" style="display:none;"></iframe>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<nav class="w-full flex justify-between items-center px-6 py-3 bg-white shadow text-black">
+  <!-- Logo izquierda -->
+  <div class="text-xl font-bold">MiLogo</div>
+
+  <!-- Links centrados -->
+<ul class="menu menu-horizontal px-1">
+  <li><a [routerLink]="'/'">Inicio</a></li>
+  <li><a [routerLink]="'/servicios'">Servicios</a></li>
+  <li><a [routerLink]="'/sobre-mi'">Sobre mí</a></li>
+  <li><a [routerLink]="'/contacto'">Contacto</a></li>
+</ul>
+
+  <!-- Botones derecha -->
+  <div class="hidden lg:flex gap-2">
+<button class="btn btn-outline btn-sm  rounded-full">Descuentos</button>
+<button class="btn btn-primary btn-sm  rounded-full">Couching</button>
+  </div>
+</nav>
