@@ -1,18 +1,33 @@
 <nav class="w-full flex justify-between items-center px-6 py-3 bg-white shadow text-black">
   <!-- Logo izquierda -->
-  <div class="text-xl font-bold">MiLogo</div>
+  <div class="text-xl font-bold">(MiLogo) Iván Campano</div>
 
   <!-- Links centrados -->
 <ul class="menu menu-horizontal px-1">
-  <li><a [routerLink]="'/'">Inicio</a></li>
-  <li><a [routerLink]="'/servicios'">Servicios</a></li>
-  <li><a [routerLink]="'/sobre-mi'">Sobre mí</a></li>
-  <li><a [routerLink]="'/contacto'">Contacto</a></li>
+  <li><a [routerLink]="'/'" class="text-blue-800 hover:text-blue-400 no-underline">Inicio</a></li>
+  <li><a [routerLink]="'/sobre-mi'" class="text-blue-800 hover:text-blue-400 no-underline">Quién soy</a></li>
+  <li><a [routerLink]="'/partners'" class="text-blue-800 hover:text-blue-400 no-underline">Patrocinadores</a></li>
+  <li><a [routerLink]="'/servicios'" class="text-blue-800 hover:text-blue-400 no-underline">Servicios</a></li>
+  <li><a [routerLink]="'/contacto'" class="text-blue-800 hover:text-blue-400 no-underline">Contacto</a></li>
 </ul>
+
 
   <!-- Botones derecha -->
   <div class="hidden lg:flex gap-2">
-<button class="btn btn-outline btn-sm  rounded-full">Descuentos</button>
-<button class="btn btn-primary btn-sm  rounded-full">Couching</button>
+<button class="btn btn-outline btn-sm"
+        style="color:#1e40af;
+               border:1px solid #1e40af;
+               background:transparent;
+               border-radius:9999px;
+               display:inline-flex;
+               align-items:center;
+               justify-content:center;
+               padding:0.5rem 1rem;">
+  Descuentos
+</button>
+
+
+
+<button [routerLink]="'/contacto'" class="btn btn-primary btn-sm  rounded-full">Couching</button>
   </div>
 </nav>
