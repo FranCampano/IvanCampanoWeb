@@ -1,14 +1,13 @@
-<div class="app-container">
+<div class="app-container flex flex-col min-h-screen">
   <header class="app-header">
     <app-menu></app-menu>
   </header>
 
-  <main class="app-main">
-    <router-outlet></router-outlet>
+  <main class="app-main flex-grow bg-white">
+    <router-outlet ></router-outlet>
   </main>
 
   <footer class="app-footer">
     <app-footer></app-footer>
   </footer>
 </div>
-

@@ -1,21 +1,23 @@
-<nav class="w-full flex justify-between items-center px-6 py-3 bg-white shadow text-black">
+<nav class="w-full flex justify-between items-center px-6 py-3 bg-white  text-black border-b border-gray-300 mb-16">
+
   <!-- Logo izquierda -->
   <div class="text-xl font-bold">(MiLogo) Iván Campano</div>
 
   <!-- Links centrados -->
-<ul class="menu menu-horizontal px-1">
-  <li><a [routerLink]="'/'" class="text-blue-800 hover:text-blue-400 no-underline">Inicio</a></li>
-  <li><a [routerLink]="'/sobre-mi'" class="text-blue-800 hover:text-blue-400 no-underline">Quién soy</a></li>
-  <li><a [routerLink]="'/partners'" class="text-blue-800 hover:text-blue-400 no-underline">Patrocinadores</a></li>
-  <li><a [routerLink]="'/servicios'" class="text-blue-800 hover:text-blue-400 no-underline">Servicios</a></li>
-  <li><a [routerLink]="'/contacto'" class="text-blue-800 hover:text-blue-400 no-underline">Contacto</a></li>
-</ul>
+  <ul class="menu menu-horizontal px-1">
+    <li *ngFor="let item of menuItems">
+      <a [routerLink]="item.link" routerLinkActive="text-black-900 font-bold"
+        [routerLinkActiveOptions]="{ exact: true }" class="text-blue-800 hover:text-blue-400 no-underline">
+        {{ item.label }}
+      </a>
+    </li>
+  </ul>
+
 
 
   <!-- Botones derecha -->
   <div class="hidden lg:flex gap-2">
-<button class="btn btn-outline btn-sm"
-        style="color:#1e40af;
+    <button class="btn btn-outline btn-sm" style="color:#1e40af;
                border:1px solid #1e40af;
                background:transparent;
                border-radius:9999px;
@@ -23,11 +25,11 @@
                align-items:center;
                justify-content:center;
                padding:0.5rem 1rem;">
-  Descuentos
-</button>
+      Descuentos
+    </button>
 
 
 
-<button [routerLink]="'/contacto'" class="btn btn-primary btn-sm  rounded-full">Couching</button>
+    <button [routerLink]="'/contacto'" class="btn btn-primary btn-sm  rounded-full">Couching</button>
   </div>
 </nav>

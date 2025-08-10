@@ -4,28 +4,34 @@
 @tailwind utilities;
 
 
-/* styles.css */
+/* Asegura que html y body ocupan todo el alto y no tienen márgenes */
 html, body {
   height: 100%;
   margin: 0;
+  background-color: #f3f4f6; /* bg-gray-100 Tailwind */
 }
 
+/* Que body use flex en columna para el layout */
 body {
   display: flex;
   flex-direction: column;
 }
 
+/* Contenedor principal ocupa toda la altura visible */
 .app-container {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* 100% del viewport */
+  min-height: 100vh; /* mejor usar min-height para adaptarse */
+  background-color: #f3f4f6; /* fondo igual para evitar huecos */
 }
 
+/* Header y footer tamaño fijo, no crecen */
 .app-header,
 .app-footer {
   flex: 0 0 auto;
 }
 
+/* Main ocupa el espacio restante */
 .app-main {
   flex: 1 1 auto;
   padding: 0;
@@ -33,3 +39,4 @@ body {
   display: flex;
   flex-direction: column;
 }
+
