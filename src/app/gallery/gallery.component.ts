@@ -4,7 +4,7 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-gallery',
   standalone: true,
-  imports: [RouterLink],
+  imports: [],
   templateUrl: './gallery.component.html',
   styleUrl: './gallery.component.css'
 })

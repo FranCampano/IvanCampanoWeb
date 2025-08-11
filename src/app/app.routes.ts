@@ -4,6 +4,8 @@ import { AchievementsComponent } from './achievements/achievements.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { HomeComponent } from './home/home.component';
+import { PartnersComponent } from './partners/partners.component';
+import { ServicesComponent } from './services/services.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -11,4 +13,7 @@ export const routes: Routes = [
   { path: 'logros', component: AchievementsComponent },
   { path: 'galeria', component: GalleryComponent },
   { path: 'contacto', component: ContactFormComponent },
+  { path: 'partners', component: PartnersComponent },
+  { path: 'servicios', component: ServicesComponent }
+
 ];
