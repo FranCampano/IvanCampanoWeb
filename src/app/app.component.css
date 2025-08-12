@@ -28,7 +28,30 @@
   background-color: #f1f1f1;
 } */
 
+:host,
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+router-outlet,
+router-outlet ~ * { /* los hermanos o padres según Angular */
+  display: block;
+  height: 100%;
+  width: 100%;
+}
 
 header, main, footer {
   background-color: white;
+}
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;  /* Toda la ventana */
+}
+
+.content {
+  flex: 1 1 auto;  /* Ocupa todo el espacio entre header y footer */
+  overflow: auto;  /* Para scroll si hace falta */
 }

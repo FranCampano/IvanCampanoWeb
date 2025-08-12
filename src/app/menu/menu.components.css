@@ -1,4 +1,7 @@
-.btn-descuentos {
-  color: blue;
-  border-color: blue;
+app-menu nav,
+app-menu nav * {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.25rem;
+  /* ~20px */
+  line-height: 1;
 }

@@ -3,12 +3,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('assets/fonts/BebasNeue-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
 
 /* Asegura que html y body ocupan todo el alto y no tienen márgenes */
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
-  background-color: #f3f4f6; /* bg-gray-100 Tailwind */
+  background-color: #f3f4f6;
+  /* bg-gray-100 Tailwind */
 }
 
 /* Que body use flex en columna para el layout */
@@ -21,8 +32,10 @@ body {
 .app-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* mejor usar min-height para adaptarse */
-  background-color: #f3f4f6; /* fondo igual para evitar huecos */
+  min-height: 100vh;
+  /* mejor usar min-height para adaptarse */
+  background-color: #f3f4f6;
+  /* fondo igual para evitar huecos */
 }
 
 /* Header y footer tamaño fijo, no crecen */
@@ -39,4 +52,3 @@ body {
   display: flex;
   flex-direction: column;
 }
-

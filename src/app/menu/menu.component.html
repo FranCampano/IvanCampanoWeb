@@ -1,4 +1,4 @@
-<nav class="w-full flex justify-between items-center px-6 py-3 bg-white  text-black border-b border-gray-300 mb-16">
+<nav class="w-full flex justify-between items-center px-6 py-3 bg-white  text-black border-b border-gray-300 ">
 
   <!-- Logo izquierda -->
   <div class="text-xl font-bold">(MiLogo) Iván Campano</div>
@@ -8,7 +8,7 @@
     <li *ngFor="let item of menuItems">
       <a [routerLink]="item.link" routerLinkActive="text-black-900 font-bold"
         [routerLinkActiveOptions]="{ exact: true }" class="text-blue-800 hover:text-blue-400 no-underline">
-        {{ item.label }}
+        {{ item.label | uppercase }}
       </a>
     </li>
   </ul>
@@ -17,7 +17,7 @@
 
   <!-- Botones derecha -->
   <div class="hidden lg:flex gap-2">
-    <button routerLink="/partners" class="btn btn-outline btn-sm" style="color:#1e40af;
+    <button routerLink="/partners" class="btn btn-outline" style="color:#1e40af;
                border:1px solid #1e40af;
                background:transparent;
                border-radius:9999px;
@@ -29,7 +29,6 @@
     </button>
 
 
-
-    <button [routerLink]="'/contacto'" class="btn btn-primary btn-sm  rounded-full">Couching</button>
+    <button [routerLink]="'/contacto'" class="btn btn-primary   rounded-full ">Couching</button>
   </div>
 </nav>

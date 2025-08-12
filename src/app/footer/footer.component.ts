@@ -1,12 +1,14 @@
 import { NgFor } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [RouterLink,NgFor],
+  imports: [RouterLink, NgFor],
   templateUrl: './footer.component.html',
+  encapsulation: ViewEncapsulation.None
+
 })
 export class FooterComponent {
   menuItems = [
