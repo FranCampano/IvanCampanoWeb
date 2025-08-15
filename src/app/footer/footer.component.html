@@ -1,10 +1,12 @@
+<!--
+linea separadora
 <hr class="border-t-1 border-gray-400 m-0" />
-
-<footer class="app-footer bg-white px-6 text-black flex items-center relative">
+-->
+<footer class="app-footer bg-[#161616] px-6 text-black flex items-center relative">
   <!-- SVGs izquierda -->
   <div class="flex gap-6 absolute left-6">
     <a href="https://www.instagram.com/ivan0116/#" target="_blank" rel="noopener noreferrer"
-      class="no-underline text-black">
+      class="no-underline text-white">
       <!-- SVG Instagram -->
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram"
         viewBox="0 0 16 16">
@@ -13,7 +15,7 @@
       </svg>
     </a>
     <a href="https://www.youtube.com/@ivancampanodiaz/videos" target="_blank" rel="noopener noreferrer"
-      class="no-underline text-black">
+      class="no-underline text-white">
       <!-- SVG YouTube -->
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
         <path fill="currentColor"
@@ -25,7 +27,7 @@
   <!-- Menú centrado -->
   <ul class="menu menu-horizontal px-1 mx-auto flex gap-x-10">
     <li *ngFor="let item of menuItems">
-      <a [routerLink]="item.link" class="text-black hover:text-blue-400 no-underline">{{ item.label }}</a>
+      <a [routerLink]="item.link" class="text-white hover:text-blue-400 no-underline">{{ item.label|uppercase }}</a>
     </li>
   </ul>
 </footer>

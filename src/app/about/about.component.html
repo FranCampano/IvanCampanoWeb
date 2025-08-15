@@ -1,54 +1,60 @@
-<section class="max-w-md mx-auto p-4 text-center">
-  <h3 class="text-2xl font-bold mb-4">Quién soy</h3>
-  <img src="ivan.jpg" alt="Descripción imagen" class="mx-auto mb-4 rounded shadow" />
-  <p class="text-gray-700">Este es el texto que va debajo de la imagen. Aquí puedes poner una descripción, explicación o
-    lo que necesites.</p>
-</section>
+<section class=" bg-brand-gris bg-opacity-100">
+  <section class=" mx-auto p-4 text-center text-white">
+    <h3 class="text-2xl font-bold mb-4">Quién soy</h3>
+    <img src="ivanQuiensoy.png" alt="Descripción imagen" class="mx-auto mb-4 rounded shadow" />
+    <p class="max-w-xl mx-auto text-center">Iván Campano Díaz es un destacado powerlifter español, nacido en 2001, especializado en la categoría de
+      59 kg. Ha logrado importantes éxitos internacionales, incluyendo el Campeonato Mundial Clásico de Powerlifting
+      2025, donde estableció un récord mundial juvenil con un total de 637.5 kg. También ha sido campeón europeo y
+      récord mundial juvenil en 2023. Se ha consolidado como una de las promesas más fuertes del powerlifting español,
+      destacando por su fuerza y disciplina. Su trayectoria sigue creciendo, inspirando a jóvenes atletas en todo el
+      país.</p>
+  </section>
 
-<section class="w-3/5 mx-auto p-4 text-center ">
-  <h3 class="text-2xl font-bold mb-4">Campeonatos</h3>
+  <section class="w-3/5 mx-auto p-4 text-center  text-white">
+    <h3 class="text-2xl font-bold mb-4">Campeonatos</h3>
 
-  <div #carousel id="carouselExample" class="carousel slide w-100" data-bs-ride="carousel" data-bs-interval="3000">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="d-flex">
-          <img src="ejemplocarusel.png" class="d-block w-50" alt="Imagen 1" />
-          <img src="ivan.jpg" class="d-block w-50" alt="Imagen 2" />
+    <div #carousel id="carouselExample" class="carousel slide w-100" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="d-flex">
+            <img src="ivanQuiensoy.png" class="d-block w-50" alt="Imagen 1" />
+            <img src="ivan.jpg" class="d-block w-50" alt="Imagen 2" />
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex">
+            <img src="ivan.jpg" class="d-block w-50" alt="Imagen 3" />
+            <img src="ejemplocarusel.png" class="d-block w-50" alt="Imagen 4" />
+          </div>
         </div>
       </div>
-      <div class="carousel-item">
-        <div class="d-flex">
-          <img src="ivan.jpg" class="d-block w-50" alt="Imagen 3" />
-          <img src="ejemplocarusel.png" class="d-block w-50" alt="Imagen 4" />
-        </div>
-      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
     </div>
 
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Anterior</span>
-    </button>
-
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Siguiente</span>
-    </button>
-  </div>
-
-  <ul class="timeline max-w-xl mx-auto">
-    <li *ngFor="let item of timelineItems; let i = index">
-      <hr *ngIf="i !== 0" />
-      <div class="timeline-middle" [class.active]="activeIndex === i">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
-          <path fill-rule="evenodd"
-            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-            clip-rule="evenodd" />
-        </svg>
-      </div>
-      <div [id]="'timeline-' + item.id" [class.active]="activeIndex === i" class="timeline-end timeline-box ">
-        {{ item.text }}
-      </div>
-      <hr />
-    </li>
-  </ul>
+    <ul class="timeline max-w-xl mx-auto">
+      <li *ngFor="let item of timelineItems; let i = index">
+        <hr *ngIf="i !== 0" />
+        <div class="timeline-middle" [class.active]="activeIndex === i">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+            <path fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div [id]="'timeline-' + item.id" [class.active]="activeIndex === i" class="timeline-end timeline-box ">
+          {{ item.text }}
+        </div>
+        <hr />
+      </li>
+    </ul>
+  </section>
 </section>

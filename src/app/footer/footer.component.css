@@ -1,0 +1,7 @@
+app-footer,
+app-footer footer *{
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.25rem;
+  /* ~20px */
+  line-height: 1;
+}
