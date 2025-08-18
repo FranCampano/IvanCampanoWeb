@@ -116,7 +116,7 @@
   background-color: white;
   color: #000;
   /* Texto negro */
-  border: 3px solid green;
+  border: 3px solid red;
   /* Borde rojo */
 }
 
@@ -128,8 +128,5 @@
   color: green;
   transform: scale(1.3);
 }
-
-
-
 
 

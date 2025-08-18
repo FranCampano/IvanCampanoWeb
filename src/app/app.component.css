@@ -31,14 +31,13 @@
 :host,
 html, body {
   height: 100%;
-  margin: 0;
-  padding: 0;
+  margin: 0!important;
+  padding: 0!important;
 }
 
 router-outlet,
 router-outlet ~ * { /* los hermanos o padres según Angular */
   display: block;
-  height: 100%;
   width: 100%;
 }
 
@@ -48,10 +47,16 @@ header, main, footer {
 .app-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;  /* Toda la ventana */
+  height: 100%;  /* Toda la ventana */
 }
 
 .content {
   flex: 1 1 auto;  /* Ocupa todo el espacio entre header y footer */
   overflow: auto;  /* Para scroll si hace falta */
 }
+
+.app-main {
+  max-height: 2000px; /* O el valor que prefieras */
+  overflow: auto;
+}
+
