@@ -15,8 +15,9 @@ RUN npm install
 # Copiar todo el proyecto
 COPY . .
 
-# Build de producción
-RUN npm run build -- --configuration production
+# Build de producción con base-href para SPA
+# Ajusta "/browser/" si servirás la app en esa ruta
+RUN npm run build -- --configuration production --base-href /browser/
 
 # -----------------------------
 # Stage 2: Servir con Nginx
@@ -29,8 +30,8 @@ RUN rm -rf /usr/share/nginx/html/*
 # Copia los archivos compilados de Angular al directorio de Nginx
 COPY --from=build /app/dist/ivan-campano-web /usr/share/nginx/html
 
-# Copia la configuración de Nginx si quieres personalizar (opcional)
-# COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Copia la configuración de Nginx personalizada
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Exponer puerto
 EXPOSE 80
