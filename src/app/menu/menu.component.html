@@ -1,19 +1,30 @@
-<nav class="w-full flex justify-between items-center px-6 py-3 bg-brand-negro  text-black">
+<nav class="w-full flex justify-between items-center px-6 py-3 bg-brand-negro text-black relative">
+
 
   <!-- Logo izquierda -->
-  <div class="text-xl font-bold text-white">(MiLogo) Iván Campano</div>
+  <div class="text-xl  text-white">
+
+    <img src="logoIvan.jpg" alt="Logo Iván Campano" class="h-10 w-auto">
+
+
+    Iván Campano
+  </div>
+
+  <!-- Botón hamburguesa SOLO visible en móvil -->
+  <button class="hamburger lg:hidden text-white text-3xl" (click)="menuOpen = !menuOpen" aria-label="Abrir menú">
+    &#9776;
+  </button>
 
   <!-- Links centrados -->
-  <ul class="menu menu-horizontal px-2 flex gap-x-16">
+  <ul class="menu menu-horizontal px-2 flex gap-x-16"
+    [ngClass]="{'hidden': !menuOpen, 'flex': menuOpen, 'lg:flex': true, 'absolute': menuOpen, 'top-16': menuOpen, 'right-6': menuOpen, 'bg-brand-negro': menuOpen, 'p-6': menuOpen, 'rounded': menuOpen, 'z-50': menuOpen}">
     <li *ngFor="let item of menuItems">
-      <a [routerLink]="item.link" routerLinkActive="text-brand-amarillo font-bold"
-        [routerLinkActiveOptions]="{ exact: true }" class="text-white no-underline">
+      <a [routerLink]="item.link" routerLinkActive="text-brand-amarillo" [routerLinkActiveOptions]="{ exact: true }"
+        class="no-underline text-white" (click)="menuOpen = false">
         {{ item.label | uppercase }}
       </a>
     </li>
   </ul>
-
-
 
   <!-- Botones derecha -->
   <div class="hidden lg:flex gap-2">
@@ -21,14 +32,9 @@
       class="bg-black border-1 border-brand-amarillo text-brand-amarillo rounded-full inline-flex items-center justify-center px-4 py-2">
       Descuentos
     </button>
-
-
     <button [routerLink]="'/contacto'"
       class="bg-brand-amarillo text-black rounded-full inline-flex items-center justify-center px-4 py-2">
       Couching
     </button>
-
-
-
   </div>
 </nav>

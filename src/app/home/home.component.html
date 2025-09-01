@@ -2,7 +2,13 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <div class="carousel-content">
-        <img src="ivanPrueba.png" alt="..." />
+        <picture>
+          <!-- Imagen para móviles -->
+          <source srcset="movil-02.jpg" media="(max-width: 790px)">
+          <!-- Imagen para escritorio -->
+          <img src="utave.jpg" alt="..." class="w-full h-auto">
+        </picture>
+
       </div>
     </div>
     <div class="carousel-item">
@@ -21,4 +27,11 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Siguiente</span>
   </button>
+
+
+  <button [routerLink]="'/contacto'" class="bg-brand-amarillo text-black rounded-full inline-flex items-center justify-center px-4 py-2 absolute left-1/2 bottom-8 transform -translate-x-1/2 z-10 shadow-lg
+    text-xl uppercase font-mifuente ">
+    Entrena conmigo
+  </button>
+
 </div>

@@ -10,8 +10,9 @@
   font-style: normal;
 }
 
-
-
+:root {
+  --color-brand-amarillo: #daa509;
+}
 
 /* Asegura que html y body ocupan todo el alto y no tienen márgenes */
 html,

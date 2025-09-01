@@ -1,7 +1,29 @@
 app-footer,
-app-footer footer *{
+app-footer footer * {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.40rem;
   /* ~20px */
   line-height: 1;
+}
+
+/* Media query móvil */
+@media (max-width: 767px) {
+
+  /* Esconde el menú */
+  .app-footer .menu {
+    display: none;
+  }
+
+  .app-footer .flex.gap-6 {
+    position: static;
+    /* deja que se coloque normalmente */
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .app-footer {
+    min-height: 50px;
+    /* footer más alto en móvil */
+  }
 }

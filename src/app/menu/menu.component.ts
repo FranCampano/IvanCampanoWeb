@@ -1,15 +1,14 @@
-import { NgFor, TitleCasePipe, UpperCasePipe } from '@angular/common';
-import { Component, Pipe, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { NgFor, UpperCasePipe, NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, NgFor,UpperCasePipe ],
+  imports: [RouterLink, RouterLinkActive, NgFor, UpperCasePipe, NgClass],
   templateUrl: './menu.component.html',
-  styleUrl: './menu.components.css',
-    encapsulation: ViewEncapsulation.None
-
+styleUrl: './menu.components.css',
+  encapsulation: ViewEncapsulation.None
 })
 export class MenuComponent {
   menuItems = [
@@ -20,4 +19,5 @@ export class MenuComponent {
     { label: 'Contacto', link: '/contacto' }
   ];
 
+  menuOpen = false;
 }
