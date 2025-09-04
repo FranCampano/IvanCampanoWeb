@@ -17,7 +17,7 @@ COPY . .
 
 # Build de producción con base-href para SPA
 # Ajusta "/browser/" si servirás la app en esa ruta
-RUN npm run build -- --configuration production --base-href /browser/
+RUN npm run build -- --configuration production --base-href "/"
 
 # -----------------------------
 # Stage 2: Servir con Nginx
@@ -28,7 +28,7 @@ FROM nginx:alpine
 RUN rm -rf /usr/share/nginx/html/*
 
 # Copia los archivos compilados de Angular al directorio de Nginx
-COPY --from=build /app/dist/ivan-campano-web /usr/share/nginx/html
+COPY --from=build /app/dist/ivan-campano-web/browser /usr/share/nginx/html
 
 # Copia la configuración de Nginx personalizada
 COPY nginx.conf /etc/nginx/conf.d/default.conf

@@ -14,6 +14,8 @@ export const routes: Routes = [
   { path: 'galeria', component: GalleryComponent },
   { path: 'contacto', component: ContactFormComponent },
   { path: 'partners', component: PartnersComponent },
-  { path: 'servicios', component: ServicesComponent }
+  { path: 'servicios', component: ServicesComponent },
+  { path: '**', component: HomeComponent } // 👈 cualquier ruta desconocida
+
 
 ];

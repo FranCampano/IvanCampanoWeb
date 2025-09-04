@@ -9,8 +9,9 @@ module.exports = {
         brand:{
           amarillo: "#daa509",
           negro: "#161616",
-          rojo: "B22222",
-          gris: "#333333"
+          rojo: "#B22222",
+          gris: "#333333",
+          dorado: "#a1781c"
         }
       }
     },

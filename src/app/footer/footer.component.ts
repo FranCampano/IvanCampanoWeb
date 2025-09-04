@@ -19,4 +19,9 @@ export class FooterComponent {
     { label: 'Servicios', link: '/servicios' },
     { label: 'Contacto', link: '/contacto' }
   ];
+
+  links = [
+    { label: 'Instagram', url: 'https://www.instagram.com/ivan0116/#' },
+    { label: 'YouTube', url: 'https://www.youtube.com/@ivancampanodiaz/videos' }
+  ];
 }

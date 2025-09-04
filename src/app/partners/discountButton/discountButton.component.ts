@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-discount-button',
@@ -6,4 +6,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   imports: [],
   templateUrl: './discountButton.component.html'
 })
-export class DiscountButtonComponent { }
+export class DiscountButtonComponent {
+
+  url = input<string>('');     
+ }
