@@ -1,9 +1,9 @@
 app-footer,
 app-footer footer * {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.40rem;
+  font-size: 1.10rem;
   /* ~20px */
-  line-height: 1;
+  line-height: 0.5rem;
 }
 
 /* Media query móvil */

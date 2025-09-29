@@ -1,4 +1,7 @@
-
+.titulo{
+font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+}
 .carousel-container {
   flex: 0 0 auto;
   width: 100%;

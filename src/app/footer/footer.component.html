@@ -1,6 +1,6 @@
-<footer class="app-footer bg-[#161616] px-6 text-black flex items-center relative pt-2">
+<footer class="app-footer bg-[#161616] px-6 text-black flex items-center relative pt-3 overflow-hidden">
   <!-- SVGs izquierda -->
-  <div class="flex gap-6 absolute left-6">
+  <div class="flex gap-6 absolute left-6 pb-3">
     <a [href]="links[0].url" target="_blank" rel="noopener noreferrer"
       class="no-underline text-white">
       <!-- SVG Instagram -->
@@ -21,7 +21,7 @@
   </div>
 
   <!-- Menú centrado -->
-  <ul class="menu menu-horizontal mx-auto flex gap-x-10">
+  <ul class="menu menu-horizontal mx-auto flex gap-x-20 tracking-wider">
     <li *ngFor="let item of menuItems">
       <a [routerLink]="item.link" class="text-white hover:text-blue-400 no-underline">{{ item.label|uppercase }}</a>
     </li>
